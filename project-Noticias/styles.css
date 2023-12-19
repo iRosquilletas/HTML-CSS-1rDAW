@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    border: 10px solid coral;
+    box-sizing: border-box;
+}
+p {
+    color: hsl(0, 100%, 25%);
+}
+h1 {
+    color: hsl(0, 100%, 25%);
+}
+h2 {
+    color: hsl(0, 100%, 25%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.botonera {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.imgBotonera {
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*body {
+    background-image: url(img/fondo.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  
+}  */ 
+
+h1 {
+    background: linear-gradient(yellow,red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
