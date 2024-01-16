@@ -34,16 +34,16 @@ a {
   left: 0;
 }
 
-/*body {
-    background-image: url(img/fondo.png);
+body {
+    background-image: url(img/codioful-formerly-gradienta-LeG68PrXA6Y-unsplash.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
   
-}  */ 
+}  
 
 h1 {
-    background: linear-gradient(yellow,red);
+    background: linear-gradient(blue,green);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

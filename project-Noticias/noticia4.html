@@ -10,60 +10,100 @@
             border:1px solid black;
             border-collapse: collapse;
         }
+
+        
+        .obra-cell {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        
+        .separador {
+            border-left: 1px solid #000;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+        }
+
+        
+        .obra-text {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="botonera">
-    <a href="indice.html"> 
-        <img class="imgBotonera" src="https://static.vecteezy.com/system/resources/previews/009/350/972/non_2x/arrow-icon-arrows-sign-black-arrows-free-png.png" alt="Back to home" style="width:42px;height:42px">
-    </a>
+        <a href="indice.html"> 
+            <img class="imgBotonera" src="https://static.vecteezy.com/system/resources/previews/009/350/972/non_2x/arrow-icon-arrows-sign-black-arrows-free-png.png" alt="Back to home" style="width:42px;height:42px">
+        </a>
     </div>
     <br><br>
     <h1>Libros Recomendados</h1>
     <table style="width:100%">
         <tr>
-            <th style="width: 5%";></th>
-            <th style="width: 30%;">Autores</th>
-            <th style="width: 60%; height: 100px;">Títulos de libros</th>
-            <th style="width: 10%;">Precio</th>
+            <th style="width: 20%"> Filas </th>
+            <th style="width: 85%">Obra</th>
         </tr>
         <tr>
-            <th style="width: 5%";>1</th>
-            <td style="width: 30%;">Gabriel García Márquez</td>
-            <td style="width: 60%;">Cien años de soledad</td>
-            <td style="width: 10%;">20€</td>
+            <td style="width: 5%">1</td>
+            <td class="obra-cell">
+                <div>Gabriel García Márquez</div>
+                <div class="separador"></div>
+                <div class="obra-text">Cien años de soledad</div>
+                <div class="separador"></div>
+                <div>20€</div>
+            </td>
         </tr>
         <tr>
-            <th style="width: 5%";>2</th>
-            <td style="width: 30%;">Jane Austen</td>
-            <td style="width: 60%;">Orgullo y prejuicio</td>
-            <td style="width: 10%;">15€</td>
+            <td style="width: 5%">2</td>
+            <td class="obra-cell">
+                <div>Jane Austen</div>
+                <div class="separador"></div>
+                <div class="obra-text">Orgullo y prejuicio</div>
+                <div class="separador"></div>
+                <div>15€</div>
+            </td>
         </tr>
         <tr>
-            <th style="width: 5%";>3</th>
-            <td style="width: 30%;">Haruki Murakami</th>
-            <td style="width: 60%;">Norwegian Wood</th>
-            <td style="width: 10%;">18€</th>
+            <td style="width: 5%">3</td>
+            <td class="obra-cell">
+                <div>Haruki Murakami</div>
+                <div class="separador"></div>
+                <div class="obra-text">Norwegian Wood</div>
+                <div class="separador"></div>
+                <div>18€</div>
+            </td>
         </tr>
         <tr>
-            <th style="width: 5%";>4</th>
-            <td style="width: 30%;">J.K. Rowling</td>
-            <td style="width: 60%;">Harry Potter y la piedra filosofal</td>
-            <td style="width: 10%;">25€</td>
+            <td style="width: 5%">4</td>
+            <td class="obra-cell">
+                <div>J.K. Rowling</div>
+                <div class="separador"></div>
+                <div class="obra-text">Harry Potter y la piedra filosofal</div>
+                <div class="separador"></div>
+                <div>25€</div>
+            </td>
         </tr>
         <tr>
-            <th style="width: 5%";>5</th>
-            <td style="width: 30%;">Agatha Christie</td>
-            <td style="width: 60%;">Asesinato en el Orient Express</td>
-            <td style="width: 10%;">22</td>
+            <td style="width: 5%">5</td>
+            <td class="obra-cell">
+                <div>Agatha Christie</div>
+                <div class="separador"></div>
+                <div class="obra-text">Asesinato en el Orient Express</div>
+                <div class="separador"></div>
+                <div>22€</div>
+            </td>
         </tr>
         <tr>
-            <th style="width: 5%";>6</th>
-            <td style="width: 30%;">Ernest Hemingway</td>
-            <td style="width: 60%;">El viejo y el mar</td>
-            <td style="width: 10%;">16€</td>
+            <td style="width: 5%">6</td>
+            <td class="obra-cell">
+                <div>Ernest Hemingway</div>
+                <div class="separador"></div>
+                <div class="obra-text">El viejo y el mar</div>
+                <div class="separador"></div>
+                <div>16€</div>
+            </td>
         </tr>
     </table>
-
 </body>
 </html>
