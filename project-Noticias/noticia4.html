@@ -6,35 +6,99 @@
     <link rel="stylesheet" href="styles.css">
     <title>Libros</title>
     <style>
-        table, th, td {
-            border:1px solid black;
+        table {
             border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border-top: 1px solid black; 
+            border-bottom: 1px solid black; 
+            padding: 8px;
             text-align: center;
+        }
+
+/*   tr:nth-child(even) {
+            background-color: lightskyblue;
+        }
+
+        tr:nth-child(odd) {
+            background-color: lightgreen;
+        }
+
+        tr:hover {
+            background-color: yellow;
+        }
+*/
+
+        .tabla-contenedor tr td:first-child {
+            background-color: lightblue; 
+        }
+
+       
+        .tabla-contenedor tr td:not(:first-child) {
+            background-color: lightgreen; 
+        }
+
+        .botonera-item {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .botonera-item:last-child {
+            margin-right: 0;
+        }
+
+        .botonera {
+            text-align: center;
+        }
+
+        .botonera ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto; 
         }
 
     </style>
 </head>
 <body>
-    <div class="botonera">
+    <!--<div class="botonera">
         <a class="botonera-link" href="indice.html"> 
             <img class="imgBotonera" src="https://static.vecteezy.com/system/resources/previews/009/350/972/non_2x/arrow-icon-arrows-sign-black-arrows-free-png.png" alt="Back to home" style="width:42px;height:42px">
-        </a>
-        <img src= "img/quijote.jpg" alt="workplace" usemap="#map" style="width:350px;height:130px; margin: 0 auto">
+        </a>-->
+    <ul class="botonera">
+        <li class="botonera-item">
+            <a class="botonera-link" href="indice.html"> 
+                <img class="imgBotonera" src="https://static.vecteezy.com/system/resources/previews/009/350/972/non_2x/arrow-icon-arrows-sign-black-arrows-free-png.png" alt="Back to home" style="width:42px;height:42px">
+            </a>
+        </li>
+        <li class="botonera-item">
+            <a class="botonera-link" href="noticia1.html">Sección 1</a>
+        </li>
+        <li class="botonera-item">
+            <a class="botonera-link" href="noticia2.html">Sección 2</a>
+        </li>
+        <li class="botonera-item">
+            <a class="botonera-link" href="noticia3.html">Sección 3</a>
+        </li>
+    </ul>
+
+  <!--      <img src= "img/quijote.jpg" alt="workplace" usemap="#map" style="width:350px;height:130px; margin: 0 auto">
             <map name="map">
                 <area shape="circle" coords="70,65,30" alt="Sección1" href="noticia1.html">
                 <area shape="circle" coords="175,65,30" alt="Sección2" href="noticia2.html">
                 <area shape="circle" coords="280,65,30" alt="Sección3" href="noticia3.html">
             </map>
     </div>
-    <br><br>
+    <br><br>-->
     <h1>Libros Recomendados</h1>
-    <table class="tabla-contenedor" style="width:100%">
+    <table class="tabla-contenedor">
         <caption style="font-size: 32px;">Obras Literarias</caption>
         <tr>
-            <th style="width: 10%"> Identificador </th>
-            <th style="width: 20%">Autor</th>
-            <th style="width: 40%">Obra</th>
-            <th style="width: 20%">Precio</th>
+            <th> Identificador </th>
+            <th>Autor</th>
+            <th>Obra</th>
+            <th>Precio</th>
         </tr>
         <tr>
             <td>1</td>
@@ -88,8 +152,111 @@
             <td>16€</td>
         </tr>
     </table>
-    
 
+    <h2>Lista Numerada de Autores con Obras</h2>
+    <ol>
+        <li>
+            Gabriel García Márquez
+            <ul>
+                <li>Cien años de soledad</li>
+                <li>Otra obra de García Márquez</li>
+            </ul>
+        </li>
+        <li>Jane Austen
+            <ul>
+                <li>Orgullo y prejuicio</li>
+            </ul>
+        </li>
+        <li>Haruki Murakami
+            <ul>
+                <li>Norwegian Wood</li>
+            </ul>
+        </li>
+        <li>
+            J.K. Rowling
+            <ul>
+                <li>Harry Potter y la piedra filosofal</li>
+                <li>Otra obra de J.K. Rowling</li>
+            </ul>
+        </li>
+        <li>
+            Agatha Christie
+            <ul>
+                <li>Asesinato en el Orient Express</li>
+                <li>Otra obra de Agatha Christie</li>
+            </ul>
+        </li>
+        <li>Ernest Hemingway
+            <ul>
+                <li>El viejo y el mar</li>
+            </ul>
+        </li>
+    </ol>
+
+
+
+ <!---   <table class="tabla-contenedor" style="width:100%">
+    <caption style="font-size: 32px;">Obras Literarias</caption>
+    <tr>
+        <th style="width: 10%"> Identificador </th>
+        <th style="width: 20%">Autor</th>
+        <th style="width: 40%">Obra</th>
+        <th style="width: 20%">Precio</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td rowspan="2">Gabriel García Márquez</td>
+        <td>Cien años de soledad</td>
+        <td>20€</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Otra obra de García Márquez</td>
+        <td>Otro precio</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Jane Austen</td>
+        <td>Orgullo y prejuicio</td>
+        <td>15€</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Haruki Murakami</td>
+        <td>Norwegian Wood</td>
+        <td>18€</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td rowspan="2">J.K. Rowling</td>
+        <td>Harry Potter y la piedra filosofal</td>
+        <td>25€</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Otra obra de J.K. Rowling</td>
+        <td>Otro precio</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td rowspan="2">Agatha Christie</td>
+        <td>Asesinato en el Orient Express</td>   
+        <td>22€</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Otra obra de Agatha Christie</td>
+        <td>Otro precio</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Ernest Hemingway</td>  
+        <td>El viejo y el mar</td>
+        <td>16€</td>
+    </tr>
+</table>
+
+-->
 
 
     <table style="width:100%">
