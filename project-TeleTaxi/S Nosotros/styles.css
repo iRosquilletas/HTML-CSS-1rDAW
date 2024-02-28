@@ -15,7 +15,7 @@ h1 {
 	text-align: center;
 	font-weight: 300;
 	border: solid 5px color(srgb 0 0 0);
-	background-color: rgb(128, 128, 128);
+	background-color: #ccc72e;
 	color: rgb(0, 0, 0);
 }
 
@@ -47,7 +47,7 @@ img {
 	
 }
 	#logo-header:hover {
-		color: #0b76a6;
+		color: #2d5466;
 	}
 
     #logo-header .logo img{
@@ -82,16 +82,19 @@ nav {
 			}
 			
 				nav ul li a:hover {
-					background: #0b76a6;
+					background: #4b475e;
 				}
+
 
 .HeadImg{
 
     margin-top: 25px;
+	width: 100%;
 	max-width: 100%;
-	min-width: 100%;
-	max-height: 50%;
+	height: auto;
+	max-height: 750px;
 }
+
 
 #main-content {
 	background: white;
