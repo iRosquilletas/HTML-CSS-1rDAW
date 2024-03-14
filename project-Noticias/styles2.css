@@ -1,0 +1,98 @@
+html, body {
+    height: 1000%;
+    margin: 0;
+}
+body {
+    border: 10px solid coral;
+    box-sizing: border-box;
+}
+p {
+    color: hsl(0, 100%, 25%);
+}
+h1 {
+    color: hsl(0, 100%, 25%);
+}
+h2 {
+    color: hsl(0, 100%, 25%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.botonera {
+    position: fixed; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: white; 
+    z-index: 1000;
+}
+
+.imgBotonera {
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body {
+    background-image: url(img/codioful-formerly-gradienta-LeG68PrXA6Y-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  
+}  
+
+h1 {
+    background: linear-gradient(blue,green);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.tabla-contenedor {
+    border: 1px solid black;
+    align-items:  center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabla-contenedor th {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    letter-spacing: 5px;
+}
+
+.tabla-contenedor td{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+
+.noticia2{
+    position: relative;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px auto;
+    width: 70%;
+    background-color: white;
+    margin-top: 200px;
+}
+
+
+.sidebar {
+    position: sticky; 
+    top: 0;
+    width: 200px; 
+    background-color: #f4f4f4; 
+    padding: 20px; 
+    z-index: 100; 
+}
+
