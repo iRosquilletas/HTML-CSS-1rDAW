@@ -84,6 +84,20 @@ h1 {
     width: 70%;
     background-color: white;
     margin-top: 200px;
+    z-index: 0;
+    display: flex;
+}
+
+.noticia2::before {
+    content: "";
+    background-image: url(img/Image_created_with_a_mobile_phone.png); /* Ruta de tu imagen de marca de agua */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2; 
+    z-index: -1; 
 }
 
 
@@ -96,3 +110,39 @@ h1 {
     z-index: 100; 
 }
 
+
+.espanol, .ingles {
+    float: left;
+    width: 50%;
+    overflow-y: auto;
+ 
+}
+
+.ingles h2 {
+    color: hsl(0, 0%, 0%);
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    overflow-y: auto;
+    display: flex;
+}
+
+.scroll {
+    width: 80%; 
+    margin: 0 auto; 
+    border: 10px solid black; 
+    padding: 20px; 
+    overflow-x: auto; 
+    white-space: nowrap;
+}
+
+.clearfix {
+    overflow: auto;
+    border: 3px solid black;
+}
+
+.img1 {
+    float:right;
+}
