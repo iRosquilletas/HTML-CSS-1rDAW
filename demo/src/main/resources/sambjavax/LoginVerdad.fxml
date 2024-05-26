@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sambjavax.LoginController">
+   <children>
+      <Text layoutX="168.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee" textAlignment="CENTER" wrappingWidth="303.09765625">
+         <font>
+            <Font size="49.0" />
+         </font>
+      </Text>
+      <Button fx:id="botonEntrar" layoutX="288.0" layoutY="261.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="63.0" text="Login" />
+      <TextField fx:id="fieldUsuario" layoutX="231.0" layoutY="174.0" onAction="#login" prefHeight="25.0" prefWidth="220.0" />
+      <Label layoutX="152.0" layoutY="173.0" prefHeight="27.0" prefWidth="76.0" text="Usuario:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="209.0" prefHeight="27.0" prefWidth="114.0" text="Contraseña:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="fieldContraseña" layoutX="231.0" layoutY="210.0" onAction="#login" prefHeight="25.0" prefWidth="220.0" />
+      <Button fx:id="botonAdmin" layoutX="510.0" layoutY="21.0" mnemonicParsing="false" onAction="#crearUser" prefHeight="27.0" prefWidth="63.0" text="Admin" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="594.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+        <Text layoutX="343.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VENTA MOTO" textAlignment="CENTER">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+      <TableView fx:id="tablaComandas" layoutX="420.0" layoutY="315.0" prefHeight="220.0" prefWidth="368.0">
+        <columns>
+          <TableColumn fx:id="NumComandaCol" prefWidth="57.0" text="Nombre" />
+            <TableColumn fx:id="IdPlatoCol" prefWidth="61.0" text="Correo" />
+            <TableColumn fx:id="CantidadCol" prefWidth="64.0" text="Teléfono" />
+            <TableColumn fx:id="EstadoCol" prefWidth="77.0" text="Dirección" />
+            <TableColumn fx:id="IdPlatoCol1" prefWidth="116.0" text="DNI" />
+        </columns>
+      </TableView>
+      <Button fx:id="botonEliminar" layoutX="575.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Aplicar" />
+      <Button fx:id="botonEditar" layoutX="445.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Eliminar" />
+      <Text layoutX="72.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modelo" wrappingWidth="62.2412109375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="botonAceptar" layoutX="679.0" layoutY="538.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="75.0" text="Aceptar" />
+      <Text layoutX="83.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca" wrappingWidth="39.701171875" />
+      <Text layoutX="105.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Moto" textAlignment="CENTER" wrappingWidth="128.912109375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="68.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matricula" wrappingWidth="79.40234375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="72.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bastidor" wrappingWidth="62.2412109375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="105.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente" textAlignment="CENTER" wrappingWidth="128.912109375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="67.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" wrappingWidth="48.701171875" />
+      <Text layoutX="72.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" wrappingWidth="39.701171875" />
+      <Text layoutX="67.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono" wrappingWidth="48.701171875" />
+      <Text layoutX="65.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección " wrappingWidth="75.0" />
+      <TextField fx:id="textFieldNombrePlato11" layoutX="169.0" layoutY="204.0" prefHeight="20.0" prefWidth="154.0" />
+      <TextField fx:id="textFieldNombrePlato111" layoutX="169.0" layoutY="178.0" prefHeight="20.0" prefWidth="154.0" />
+      <TextField fx:id="textFieldNombrePlato112" layoutX="169.0" layoutY="145.0" prefHeight="20.0" prefWidth="154.0" />
+      <TextField fx:id="textFieldNombrePlato113" layoutX="169.0" layoutY="119.0" prefHeight="20.0" prefWidth="154.0" />
+      <TextField fx:id="textFieldNombrePlato1131" layoutX="157.0" layoutY="341.0" prefHeight="20.0" prefWidth="154.0" />
+      <TextField fx:id="textFieldNombrePlato11311" layoutX="157.0" layoutY="378.0" prefHeight="20.0" prefWidth="154.0" />
+      <TextField fx:id="textFieldNombrePlato11312" layoutX="157.0" layoutY="412.0" prefHeight="20.0" prefWidth="154.0" />
+      <TextField fx:id="textFieldNombrePlato11313" layoutX="157.0" layoutY="312.0" prefHeight="20.0" prefWidth="154.0" />
+      <TableView fx:id="tablaComandas1" layoutX="427.0" layoutY="75.0" prefHeight="206.0" prefWidth="354.0">
+         <columns>
+            <TableColumn fx:id="NumComandaCol1" prefWidth="111.0" text="Marca" />
+            <TableColumn fx:id="IdPlatoCol1" prefWidth="66.0" text="Modelo" />
+            <TableColumn fx:id="CantidadCol1" prefWidth="75.0" text="Matricula" />
+            <TableColumn fx:id="EstadoCol1" prefWidth="130.0" text="Bastidor" />
+            <TableColumn fx:id="IdPlatoCol11" prefWidth="66.0" text="Correo" />
+         </columns>
+      </TableView>
+      <Text layoutX="67.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI" wrappingWidth="48.701171875" />
+      <TextField fx:id="textFieldNombrePlato113121" layoutX="157.0" layoutY="442.0" prefHeight="20.0" prefWidth="154.0" />
+    </children>
+</AnchorPane>
