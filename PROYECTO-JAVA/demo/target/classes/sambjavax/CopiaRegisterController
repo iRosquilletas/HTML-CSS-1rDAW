@@ -1,0 +1,139 @@
+package sambjavax;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Base64;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Map;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
+
+import java.io.IOException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ResourceBundle;
+public class RegisterController implements Initializable {
+
+    @FXML
+    private TextField fieldUsuario;
+
+    @FXML
+    private PasswordField fieldContraseña;
+
+    @FXML
+    private Button botonAceptar;
+
+    @FXML
+    private ChoiceBox<String> rol;
+    private String[] roles = {"Empleado","Admin"};
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        rol.getItems().addAll(roles);
+    }
+    private boolean crearUsuario(String usuario, String contrasena, String rolSeleccionado) {
+        // Generar salt aleatorio
+        byte[] salt = generateSalt();
+    
+        // Hashear la contraseña con el salt
+        String hashedPassword = hashPassword(contrasena, salt);
+    
+        // Insertar nuevo usuario en la base de datos
+        String url = "jdbc:mysql://localhost:3306/cesdb2022";
+        String dbUsuario = "root";
+        String dbContrasena = "dbrootpass";
+    
+        try (Connection conn = DriverManager.getConnection(url, dbUsuario, dbContrasena)) {
+            String query = "INSERT INTO Usuarios (nombre_usuario, contrasena, salt, rol) VALUES (?, ?, ?, ?)";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, usuario);
+            stmt.setString(2, hashedPassword);
+            stmt.setString(3, Base64.getEncoder().encodeToString(salt));
+            stmt.setString(4, rolSeleccionado);
+    
+            int filasAfectadas = stmt.executeUpdate();
+            return filasAfectadas > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    @FXML
+    private void crearUsuario() {
+        String usuario = fieldUsuario.getText();
+        String contrasena = fieldContraseña.getText();
+        String rolSeleccionado = rol.getValue(); // Obtener el rol seleccionado
+    
+        if (usuario.isEmpty() || contrasena.isEmpty() || rolSeleccionado == null) {
+            showAlert("Error", "Por favor, complete todos los campos.");
+            return;
+        }
+    
+        if (crearUsuario(usuario, contrasena, rolSeleccionado)) {
+            showAlert("Éxito", "Usuario creado correctamente.");
+        } else {
+            showAlert("Error", "Ocurrió un error al crear el usuario.");
+        }
+    }
+
+    private byte[] generateSalt() {
+        SecureRandom random = new SecureRandom();
+        byte[] salt = new byte[16];
+        random.nextBytes(salt);
+        return salt;
+    }
+
+    private String hashPassword(String password, byte[] salt) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            md.update(salt);
+            byte[] hashedPassword = md.digest(password.getBytes());
+            return Base64.getEncoder().encodeToString(hashedPassword);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    
+
+}

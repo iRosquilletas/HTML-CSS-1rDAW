@@ -1,0 +1,2 @@
+ID Venta: 43, ID Usuario: 13, Cliente: ñokhnblkj, Correo: hlkhlkh, Telefono: khllh, Direccion: hlhlñhh, DNI: 789, ID Moto: 8, Marca: Marca3, Modelo: Modelo3, Matricula: MAT003, Bastidor: NB003
+ID Venta: 44, ID Usuario: 13, Cliente: jnpo, Correo: pojpòj, Telefono: ojojpo'90j, Direccion: pojpò, DNI: pojpoj, ID Moto: 9, Marca: Marca4, Modelo: Modelo4, Matricula: MAT004, Bastidor: NB004
